@@ -1,0 +1,11 @@
+Auteur: asby
+Flag: ebCTF{81cdfc61a8f35db89a6fe1c94c071224}
+Short summary (no spoilers): 
+
+We found this server with two open ports. Can you find out what these ports do and login to the server? It is advisable to use a seperate VM for this challenge.
+
+Nmap scan report (x.x.x.x)
+Host is up (0.026s latency).
+PORT     STATE SERVICE
+22/tcp   open  ssh
+8140/tcp open  unknown

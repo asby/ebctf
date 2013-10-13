@@ -1,0 +1,33 @@
+
+___________.__            .______.                                
+\_   _____/|__| ____    __| _/\_ |__ _____  ________ ____   ____  
+ |    __)_ |  |/    \  / __ |  | __ \\__  \ \___   // __ \ /    \ 
+ |        \|  |   |  \/ /_/ |  | \_\ \/ __ \_/    /\  ___/|   |  \
+/_______  /|__|___|  /\____ |  |___  (____  /_____ \\___  >___|  /
+        \/         \/      \/      \/     \/      \/    \/     \/ 
+------------------------------------------------------------------
+
+Welcome to this server. 
+
+You'll have to pass three levels of security before you can find
+the flag. The goal for level1 and level2 is to get the ssh key for
+level2 and level3. The goal for level3 is to get the flag. 
+
+
+
+There are some rules you should read before you continue.
+
+Rules:
+------
+* Behave
+* Clean up your mess once done (you don't want to help other teams)
+* No fork bombs please
+* There is no need to do system wide searches, the challenges can
+  be found in the users home dir.
+* Not following these rules can get your ip banned from our 
+  infrastructure and can lead to disqualification of your team
+
+Have fun and once again, behave.
+
+Eindbazen
+

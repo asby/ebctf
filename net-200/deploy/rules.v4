@@ -1,0 +1,49 @@
+# FILTER table
+*filter
+:INPUT DROP 
+# ALLOW ALL INTERNAL NETWORKS
+-A INPUT -i eth0 -s 10.0.0.0/8 -j ACCEPT
+-A INPUT -i eth0 -s 172.16.0.0/12 -j ACCEPT
+-A INPUT -i eth0 -s 192.168.0.0/16 -j ACCEPT
+
+# EXTERNAL NETWORK (only accept ssh,http and port knock ports) 
+-A INPUT -i eth0 -p tcp --dport 22 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+
+# ALLOW RELATED TRAFFIC
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Level 1
+-A INPUT -i eth0 -p tcp --dport 112 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 386 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 712 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 1398 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 8771 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 11982 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 15397 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 23984 -j ACCEPT
+
+# Level 2
+-A INPUT -i eth0 -p udp --dport 8112 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 33386 -j ACCEPT
+-A INPUT -i eth0 -p udp --dport 14712 -j ACCEPT
+-A INPUT -i eth0 -p udp --dport 4398 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 1771 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 52313 -j ACCEPT
+-A INPUT -i eth0 -p udp --dport 25697 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 932 -j ACCEPT
+
+# Level 3
+-A INPUT -i eth0 -p tcp --dport 234 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 781 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 983 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 2411 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 9781 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 14954 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 23112 -j ACCEPT
+-A INPUT -i eth0 -p tcp --dport 63991 -j ACCEPT
+
+:FORWARD ACCEPT
+-A FORWARD -j DROP
+:OUTPUT ACCEPT
+COMMIT

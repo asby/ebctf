@@ -1,0 +1,7 @@
+<FilesMatch "\.(htaccess|htpasswd|sqlite|db)$">
+ Order Allow,Deny
+ Deny from all
+</FilesMatch>
+
+# disable directory browsing
+Options All -Indexes
