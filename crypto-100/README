@@ -1,10 +1,3 @@
 Auteur: asby
 Flag: ebCTF{62abc1c096bb166932ab4ab1fde15f34}
 Short summary (no spoilers): Some low level crypto ciphers
-
-1st PART: Vigenere with key WOODENSHOE
-2nd PART: ADFGVX with key CARGO
-3rd PART: Picture, XOR with Base64
-4th PART: Transposition Cipher
-5th PART: Substitution
-6th PART: Caesar
